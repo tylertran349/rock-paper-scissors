@@ -12,10 +12,13 @@ function getComputerChoice() {
     randomNumber = Math.floor(Math.random() * (4 - 1) + 1);
     if(randomNumber == 1) {
         choice = "rock";
+        document.getElementById("computer-choice-icon").innerHTML = "✊";
     } else if(randomNumber == 2) {
         choice = "paper";
+        document.getElementById("computer-choice-icon").innerHTML = "✋";
     } else if(randomNumber == 3) {
         choice = "scissors";
+        document.getElementById("computer-choice-icon").innerHTML = "✌";
     }
     return choice;
 }
@@ -24,77 +27,99 @@ function playRound(playerSelection, computerSelection) {
     playerSelection = playerSelection.toLowerCase();
     let result;
     if(playerSelection === "rock" && computerSelection === "paper") {
-        result = "You lose! Paper beats rock.";
+        document.getElementById("result").innerHTML = "You lost!";
+        result = "Paper beats rock";
         computerScorekeeper();
-        winDetector()
+        winDetector();
     } else if(playerSelection === "rock" && computerSelection === "scissors") {
-        result = "You win! Rock beats scissors.";
+        document.getElementById("result").innerHTML = "You won!";
+        result = "Rock beats scissors";
         playerScorekeeper();
-        winDetector()
+        winDetector();
     } else if(playerSelection === "rock" && computerSelection === "rock") {
-        result = "Tie!";
-        winDetector()
+        document.getElementById("result").innerHTML = "It's a tie!";
+        result = "Rock ties with rock";
+        winDetector();
     } else if(playerSelection === "scissors" && computerSelection === "scissors") {
-        result = "Tie!";
-        winDetector()
+        document.getElementById("result").innerHTML = "It's a tie!";
+        result = "Scissors ties with scissors";
+        winDetector();
     } else if(playerSelection === "scissors" && computerSelection === "rock") {
-        result = "You lose! Rock beats scissors.";
+        document.getElementById("result").innerHTML = "You lost!";
+        result = "Rock beats scissors";
         computerScorekeeper();
-        winDetector()
+        winDetector();
     } else if(playerSelection === "scissors" && computerSelection === "paper") {
-        result = "You win! Scissors beats paper.";
+        document.getElementById("result").innerHTML = "You won!";
+        result = "Scissors beats paper";
         playerScorekeeper();
-        winDetector()
+        winDetector();
     } else if(playerSelection === "paper" && computerSelection === "paper") {
-        result = "Tie!";
-        winDetector()
+        document.getElementById("result").innerHTML = "It's a tie!";
+        result = "Paper ties with paper";
+        winDetector();
     } else if(playerSelection === "paper" && computerSelection === "scissors") {
-        result = "You lose! Scissors beats paper.";
+        document.getElementById("result").innerHTML = "You lost!";
+        result = "Scissors beats paper";
         computerScorekeeper();
-        winDetector()
+        winDetector();
     } else if(playerSelection === "paper" && computerSelection === "rock") {
-        result = "You win! Paper beats rock.";
+        document.getElementById("result").innerHTML = "You won!";
+        result = "Paper beats rock";
         playerScorekeeper();
-        winDetector()
+        winDetector();
     }
     return result;
 }
 
 function winDetector() {
     if(playerWinCount === 5) {
-        const winnerMessage = document.createElement('div');
-        winnerMessage.textContent = "Congratulations, you won! Reload the page to play again.";
-        body.appendChild(winnerMessage);
+        // Make winner announcement overlay visible
+        document.getElementById("winner-announcement-overlay").style.display = "flex";
+
+        // Announce winner
+        document.getElementById("winner-announcement").innerHTML = "You won!";
+
         rock.disabled = true;
         paper.disabled = true;
         scissors.disabled = true;
     }
     if(computerWinCount === 5) {
-        const winnerMessage = document.createElement('div');
-        winnerMessage.textContent = "The computer beat you. Reload the page to play again.";
-        body.appendChild(winnerMessage);
+        // Make winner announcement overlay visible
+        document.getElementById("winner-announcement-overlay").style.display = "flex";
+
+        // Announce winner
+        document.getElementById("winner-announcement").innerHTML = "You lost :("
+
+        // Disable buttons
         rock.disabled = true;
         paper.disabled = true;
         scissors.disabled = true;
     }
 }
 
+// If player wins round, increment player score and update player score text
 function playerScorekeeper() {
     playerWinCount++;
-    document.getElementById("player-score-counter").innerHTML = "Player score: " + playerWinCount;
+    document.getElementById("player-score-counter").innerHTML = "Player: " + playerWinCount;
 }
 
+// If computer wins round, increment computer score and update computer score text
 function computerScorekeeper() {
     computerWinCount++;
-    document.getElementById("computer-score-counter").innerHTML = "Computer score: " + computerWinCount;
+    document.getElementById("computer-score-counter").innerHTML = "Computer: " + computerWinCount;
 }
 
+// Event listeners for rock, paper, and scissors buttons call playRound() function to update result, result explanation, and player/computer choice icon based on the round that was just played
 rock.addEventListener('click', () => {
-    document.getElementById("result").innerHTML = "Result: " + (playRound("rock", getComputerChoice()));
+    document.getElementById("result-explanation").innerHTML = playRound("rock", getComputerChoice());
+    document.getElementById("player-choice-icon").innerHTML = "✊";
 });
 paper.addEventListener('click', () => {
-    document.getElementById("result").innerHTML = "Result: " + (playRound("paper", getComputerChoice()));
+    document.getElementById("result-explanation").innerHTML = playRound("paper", getComputerChoice());
+    document.getElementById("player-choice-icon").innerHTML = "✋";
 });
 scissors.addEventListener('click', () => {
-    document.getElementById("result").innerHTML = "Result: " + (playRound("scissors", getComputerChoice()));
+    document.getElementById("result-explanation").innerHTML = playRound("scissors", getComputerChoice());
+    document.getElementById("player-choice-icon").innerHTML = "✌";
 });
