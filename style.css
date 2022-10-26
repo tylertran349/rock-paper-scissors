@@ -105,6 +105,7 @@ body {
     height: 150px;
     width: 150px;
     border-radius: 12px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
 }
 
 #footer {
@@ -132,7 +133,6 @@ body {
     justify-content: center;
     align-items: center;
 }
-
 
 #winner-announcement-box {
     background-color: #1F2937;
@@ -163,4 +163,9 @@ body {
     font-size: 24px;
     border-radius: 12px;
     border: 0px;
+    box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
+}
+
+#rock-btn:active, #paper-btn:active, #scissors-btn:active, #play-again-button:active {
+    background: #00000044;
 }
