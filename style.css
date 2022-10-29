@@ -167,7 +167,7 @@ body {
 }
 
 #rock-btn:hover, #paper-btn:hover, #scissors-btn:hover, #play-again-button:hover {
-    background: #575b61;
+    background: #52565c;
 }
 
 #rock-btn:active, #paper-btn:active, #scissors-btn:active, #play-again-button:active {
