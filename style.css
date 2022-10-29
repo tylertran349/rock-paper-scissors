@@ -166,6 +166,10 @@ body {
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
 }
 
+#rock-btn:hover, #paper-btn:hover, #scissors-btn:hover, #play-again-button:hover {
+    background: #575b61;
+}
+
 #rock-btn:active, #paper-btn:active, #scissors-btn:active, #play-again-button:active {
-    background: #00000044;
+    background: #303338;
 }
