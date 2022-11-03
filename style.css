@@ -173,3 +173,15 @@ body {
 #rock-btn:active, #paper-btn:active, #scissors-btn:active, #play-again-button:active {
     background: #303338;
 }
+
+/* GitHub footer icon styling */
+.fa-github {
+    color: #F9FAF8;
+    font-size: 24px;
+    transition: transform 0.3s ease-in-out;
+}
+  
+/* GitHub footer icon animation on hover */
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.2);
+}
