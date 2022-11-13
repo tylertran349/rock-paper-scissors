@@ -5,72 +5,71 @@ body {
     justify-content: center;
     align-items: center;
     font-family: "Roboto", sans-serif;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
 }
 
 #header {
     background-color: #11171f;
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 #title {
     font-family: "Press Start 2P", sans-serif;
-    font-size: 38px;
+    font-size: 2.5rem;
     font-weight: 900;
     color: rgb(233, 189, 79);
     text-align: center;
 }
 
 #result-section {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 48px;
-    padding-bottom: 48px;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
 }
 
 #result {
     color: #F9FAF8;
     font-weight: bold;
-    font-size: 30px;
-    margin-bottom: 18px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 #result-explanation {
     color: #F9FAF8;
     font-weight: bold;
-    font-size: 18px;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #score-counter-section {
-    padding-left: 0px;
-    padding-right: 0px;
-    margin: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     width: 100%;
-    padding-top: 0px;
-    padding-bottom: 48px;
-    gap: 128px;
+    padding-top: 0;
+    padding-bottom: 3rem;
+    gap: 8rem;
 }
 
 #player-side, #computer-side {
@@ -78,33 +77,33 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 1.5rem;
 }
 
 #player-choice-icon, #computer-choice-icon {
     color: #F9FAF8;
-    font-size: 96px;
+    font-size: 6rem;
 }
 
 #player-score-counter, #computer-score-counter {
     color: #F9FAF8;
-    font-size: 18px;
     font-weight: bold;
 }
 
 #buttons-section {
     display: flex;
-    gap: 32px;
+    justify-content: center;
+    gap: 5rem;
 }
 
 #rock-btn, #paper-btn, #scissors-btn {
     border: 0;
     background-color: #4a4f57;
     color: #F9FAF8;
-    font-size: 96px;
-    height: 150px;
-    width: 150px;
-    border-radius: 12px;
+    font-size: 6rem;
+    height: 10%;
+    aspect-ratio: 1/1;
+    border-radius: 0.75rem;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
 }
 
@@ -114,8 +113,7 @@ body {
     width: 100%;
     text-align: center;
     color: #F9FAF8;
-    font-size: 18px;
-    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
 }
 
 
@@ -136,33 +134,33 @@ body {
 
 #winner-announcement-box {
     background-color: #1F2937;
-    height: 175px;
-    width: 275px;
-    border-radius: 12px;
+    height: 11rem;
+    width: 17rem;
+    border-radius: 0.75rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 1.5rem;
 }
 
 #winner-announcement {
     text-align: center;
     color: #F9FAF8;
-    font-size: 36px;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 #play-again-button {
-    padding-left: 24px;
-    padding-right: 24px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
     background-color: #4a4f57;
     color: #F9FAF8;
-    font-size: 24px;
-    border-radius: 12px;
-    border: 0px;
+    font-size: 1.5rem;
+    border-radius: 0.75rem;
+    border: 0;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
 }
 
@@ -177,7 +175,7 @@ body {
 /* GitHub footer icon styling */
 .fa-github {
     color: #F9FAF8;
-    font-size: 24px;
+    font-size: 1.5rem;
     transition: transform 0.3s ease-in-out;
 }
   
