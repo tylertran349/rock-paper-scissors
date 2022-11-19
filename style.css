@@ -105,6 +105,7 @@ body {
     aspect-ratio: 1/1;
     border-radius: 0.75rem;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
+    font-family: inherit;
 }
 
 #footer {
@@ -162,6 +163,7 @@ body {
     border-radius: 0.75rem;
     border: 0;
     box-shadow: 0 3px 12px rgb(0 0 0 / 0.7);
+    font-family: inherit;
 }
 
 #rock-btn:hover, #paper-btn:hover, #scissors-btn:hover, #play-again-button:hover {
